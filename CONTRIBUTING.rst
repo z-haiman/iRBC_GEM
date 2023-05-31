@@ -15,7 +15,7 @@ Types of Contributions
 Report Problems
 ~~~~~~~~~~~~~~~
 
-Report problems with the metabolic model at https://github.com/z-haiman/irbc_gem/issues.
+Report problems with the metabolic model at https://github.com/z-haiman/iRBC_GEM/issues.
 
 If you are reporting a problem, please include:
 
@@ -45,7 +45,7 @@ articles, and such.
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
-The best way to send feedback is to file an issue at https://github.com/z-haiman/irbc_gem/issues.
+The best way to send feedback is to file an issue at https://github.com/z-haiman/iRBC_GEM/issues.
 
 If you are proposing a feature:
 
@@ -57,17 +57,17 @@ If you are proposing a feature:
 Get Started!
 ------------
 
-Ready to contribute? Here's how to set up `irbc_gem` for local development.
+Ready to contribute? Here's how to set up ``iRBC_GEM`` for local development.
 
-1. Fork the `irbc_gem` repo on GitHub.
+1. Fork the ``iRBC_GEM`` repo on GitHub.
 2. Clone your fork locally::
 
-    $ git clone git@github.com:your_name_here/irbc_gem.git
+    $ git clone git@github.com:your_name_here/iRBC_GEM.git
 
 3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development::
 
-    $ mkvirtualenv irbc_gem
-    $ cd irbc_gem/
+    $ mkvirtualenv iRBC_GEM
+    $ cd iRBC_GEM/
     $ pip install -e .
 
 4. Create a branch for local development::
@@ -78,7 +78,7 @@ Ready to contribute? Here's how to set up `irbc_gem` for local development.
 
 5. When you're done making changes, check that your changes pass the memote test suite::
 
-    $ memote irbc_gem
+    $ memote iRBC_GEM
 
 6. Commit your changes and push your branch to GitHub::
 

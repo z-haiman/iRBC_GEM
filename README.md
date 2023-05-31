@@ -9,7 +9,7 @@ repository.
 
 1. Update this README to your liking and to say something about the model that
    you are working on.
-2. Take note of the [license](LICENSE) in case you want to change it. By 
+2. Take note of the [license](LICENSE) in case you want to change it. By
 default we have added a [CC-BY](https://creativecommons.org/licenses/by/4.0/) license to your repository.
 3. Check out the [memote documentation](http://memote.readthedocs.io/) online.
 

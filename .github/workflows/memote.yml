@@ -27,4 +27,3 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         HEAD_REF: ${{ github.ref_name }}
       run: ./scripts/ghactions_deploy.sh
-
