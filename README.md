@@ -27,7 +27,7 @@ to do is:
 
 1. Create a [GitHub](https://github.com/) account.
 2. Run `memote online`.
-3. A history report will be publicly visible at https://z-haiman.github.io/irbc_gem.
+3. A history report will be publicly visible at https://z-haiman.github.io/iRBC_GEM.
 
 ---
 
