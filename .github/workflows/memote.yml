@@ -41,7 +41,6 @@ jobs:
         path: ${{ env.pythonLocation }}
         key: ${{ runner.os }}-pydeps-${{ env.pythonLocation }}-${{ hashFiles('setup.cfg') }}-${{ hashFiles('pyproject.toml') }}
     -
-    -
       name: Install dependencies
       run: |
         python -m pip install ${{ env.PIP_INSTALL_OPTS }} pip
