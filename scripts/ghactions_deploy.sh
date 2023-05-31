@@ -3,21 +3,21 @@
 # Do NOT set -v or -x or your GitHub API token will be leaked!
 #set -ue # exit with nonzero exit code if anything fails
 
-echo "Parse memote.ini for values."
-deployment=$(awk -F '=' '{if (! ($0 ~ /^;/) && $0 ~ /deployment/) print $2}' memote.ini | tr -d ' ')
-location=$(awk -F '=' '{if (! ($0 ~ /^;/) && $0 ~ /location/) print $2}' memote.ini | tr -d ' ')
+echo "Parse setup.cfg.ini for values."
+deployment=$(awk -F '=' '{if (! ($0 ~ /^;/) && $0 ~ /deployment/) print $2}' setup.cfg | tr -d ' ')
+location=$(awk -F '=' '{if (! ($0 ~ /^;/) && $0 ~ /location/) print $2}' setup.cfg | tr -d ' ')
 
 git config --global user.email "zhaiman@eng.ucsd.edu"
-git config --global user.name "z-haiman/irbc_gem" 
+git config --global user.name "z-haiman/iRBC_GEM"
 
-if [[ "${GITHUB_EVENT_NAME}" == "pull_request" || "${GITHUB_REPOSITORY}" != "z-haiman/irbc_gem" ]]; then
+if [[ "${GITHUB_EVENT_NAME}" == "pull_request" || "${GITHUB_REPOSITORY}" != "z-haiman/iRBC_GEM" ]]; then
     echo "Untracked build."
     memote run --ignore-git
 		echo "Skip deploy."
     exit 0
 else
 		# Always need the deployment branch available locally for storing results.
-		echo "Checking  if deployment branch ${deployment} is available"
+		echo "Checking if deployment branch ${deployment} is available"
 		git checkout "${deployment}"
 		echo "Back to base ${HEAD_REF}"
 		git checkout ${HEAD_REF}
@@ -38,4 +38,4 @@ git add "${output}"
 git commit -m "Github actions report # ${GITHUB_SHA}"
 git push --quiet "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "${deployment}" > /dev/null
 
-echo "Your new report will be visible at https://z-haiman.github.io/irbc_gem in a moment."
+echo "Your new report will be visible at https://z-haiman.github.io/iRBC_GEM in a moment."
