@@ -6,7 +6,7 @@
 echo "Parse setup.cfg.ini for values."
 deployment=$(awk -F '=' '{if (! ($0 ~ /^;/) && $0 ~ /deployment/) print $2}' setup.cfg | tr -d ' ')
 location=$(awk -F '=' '{if (! ($0 ~ /^;/) && $0 ~ /location/) print $2}' setup.cfg | tr -d ' ')
-echo $deployment
+
 git config --global user.email "zhaiman@eng.ucsd.edu"
 git config --global user.name "z-haiman/iRBC_GEM"
 
