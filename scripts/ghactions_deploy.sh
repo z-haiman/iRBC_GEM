@@ -3,9 +3,9 @@
 # Do NOT set -v or -x or your GitHub API token will be leaked!
 #set -ue # exit with nonzero exit code if anything fails
 
-echo "Parse setup.cfg.ini for values."
-deployment=$(awk -F '=' '{if (! ($0 ~ /^;/) && $0 ~ /deployment/) print $2}' setup.cfg | tr -d ' ')
-location=$(awk -F '=' '{if (! ($0 ~ /^;/) && $0 ~ /location/) print $2}' setup.cfg | tr -d ' ')
+echo "Parse memote.ini for values."
+deployment=$(awk -F '=' '{if (! ($0 ~ /^;/) && $0 ~ /deployment/) print $2}' memote.ini | tr -d ' ')
+location=$(awk -F '=' '{if (! ($0 ~ /^;/) && $0 ~ /location/) print $2}' memote.ini | tr -d ' ')
 
 git config --global user.email "zhaiman@eng.ucsd.edu"
 git config --global user.name "z-haiman/iRBC_GEM"
